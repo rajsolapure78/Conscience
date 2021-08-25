@@ -1,20 +1,21 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { Container } from 'react-bootstrap';
+import { Container, NavLink } from 'react-bootstrap';
 import PropTypes from 'prop-types'
+import { Switch, Route, Link } from 'react-router-dom';
 
 export default function Header(Props) {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/home">{Props.Title}</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home">{Props.Title}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="/home">Home</Nav.Link>
-                            <Nav.Link href="/createpost">Create Post</Nav.Link>
+                        <Nav>
+                            <NavLink as={Link} to="/home">Home</NavLink>
+                            <NavLink as={Link} to="/createpost">Create Post</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
