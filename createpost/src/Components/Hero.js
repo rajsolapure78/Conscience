@@ -9,8 +9,8 @@ export default function Hero() {
         margin: "20px auto"
     }
     let imgstyle = {
-        width: "50%",
-        height: "50%"
+        width: "100%",
+        height: "100%"
 }
 return (
     <div className="container" style={myStyle}>

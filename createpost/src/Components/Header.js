@@ -8,14 +8,14 @@ import { Switch, Route, Link } from 'react-router-dom';
 export default function Header(Props) {
     return (
         <div>
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand as={Link} to="/home">{Props.Title}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav>
                             <NavLink as={Link} to="/home">Home</NavLink>
-                            <NavLink as={Link} to="/createpost">Create Post</NavLink>
+                            <NavLink as={Link} to="/createblog">Create a Post</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
